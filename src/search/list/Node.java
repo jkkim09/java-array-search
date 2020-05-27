@@ -2,7 +2,7 @@ package search.list;
 
 public class Node {
     int data;
-    int count = 0;
+    int count = 1;
     String nodeName;
     Node left;
     Node right;
@@ -16,7 +16,6 @@ public class Node {
         this.data = data;
         this.left = null;
         this.right = null;
-        this.count++;
         setNodeName(data);
     }
     
