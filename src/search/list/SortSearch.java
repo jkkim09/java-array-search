@@ -2,43 +2,43 @@ package search.list;
 
 public interface SortSearch {
 	/**
-	 * ÀÔ·Â¹ŞÀº ÇØ´ç °ªÀÌ  Á¸Àç À¯¹«
+	 * ì…ë ¥ë°›ì€ í•´ë‹¹ ê°’ì´  ì¡´ì¬ ìœ ë¬´
 	 * 
-	 * @param n		Ã£À¸·Á´Â °ª
-	 * @return		Á¸Àç À¯¹«
+	 * @param n		ì°¾ìœ¼ë ¤ëŠ” ê°’
+	 * @return		ì¡´ì¬ ìœ ë¬´
 	 */
 	public boolean exists(int n);
 	
 	/**
-	 * min ºÎÅÍ max ±îÁö Á¸ÀçÇÏ´Â »çÀÌ°ª ¼öÁı (Áßº¹µÈ °ªµµ ¸ğµÎ ¼öÁı)
+	 * min ë¶€í„° max ê¹Œì§€ ì¡´ì¬í•˜ëŠ” ì‚¬ì´ê°’ ìˆ˜ì§‘ (ì¤‘ë³µëœ ê°’ë„ ëª¨ë‘ ìˆ˜ì§‘)
 	 * 
-	 * @param min	Ã£´Â°ª ÃÖ¼Ò°ª
-	 * @param max	Ã£´Â°ª ÃÖ´ë°ª
-	 * @return		Ã£Àº °ª list
+	 * @param min	ì°¾ëŠ”ê°’ ìµœì†Œê°’
+	 * @param max	ì°¾ëŠ”ê°’ ìµœëŒ€ê°’
+	 * @return		ì°¾ì€ ê°’ list
 	 */
 	public int[] range(int min, int max);
 	
 	/**
-	 * ÁÖ¾îÁø ¼öÀÇ °¹¼ö ¼öÁı
+	 * ì£¼ì–´ì§„ ìˆ˜ì˜ ê°¯ìˆ˜ ìˆ˜ì§‘
 	 * 
-	 * @param list	Ã£´Â°ªµé ¸®½ºÆ®
-	 * @return		Ã£´Â°ª °¹¼ö ¸®½ºÆ®
+	 * @param list	ì°¾ëŠ”ê°’ë“¤ ë¦¬ìŠ¤íŠ¸
+	 * @return		ì°¾ëŠ”ê°’ ê°¯ìˆ˜ ë¦¬ìŠ¤íŠ¸
 	 */
 	public int[] count(int[] list);
 	
 	/**
-	 * ÃÖ´ë°ª n°³ ¼öÁı (Áßº¹½Ã ´ÙÀ½¤¡¹å ¼öÁıÇØ¼­ ÃÑ n°³)
+	 * ìµœëŒ€ê°’ nê°œ ìˆ˜ì§‘ (ì¤‘ë³µì‹œ ë‹¤ìŒ ê°’ ìˆ˜ì§‘í•´ì„œ ì´ nê°œ)
 	 * 
-	 * @param n		ÃÖ´ë°ª n°³
-	 * @return		ÃÖ´ë°ª list
+	 * @param n		ìµœëŒ€ê°’ nê°œ
+	 * @return		ìµœëŒ€ê°’ list
 	 */
 	public int[] take(int n);
 	
 	/**
-	 * Á¤±Ô½Ä À¸·Î ÇØ´çÇÏ´Â °ªµé ¹İÈ¯
+	 * ì •ê·œì‹ ìœ¼ë¡œ í•´ë‹¹í•˜ëŠ” ê°’ë“¤ ë°˜í™˜
 	 * 
-	 * @param asterisk	Ã£´Â Á¶°Ç
-	 * @return			Ã£Àº°ª list
+	 * @param asterisk	ì°¾ëŠ” ì¡°ê±´
+	 * @return			ì°¾ì€ê°’ list
 	 */
 	public int[] filter(String asterisk);
 }

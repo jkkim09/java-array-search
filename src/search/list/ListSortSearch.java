@@ -10,6 +10,11 @@ public class ListSortSearch implements SortSearch{
 			int negativeCheck = (int)(Math.random() * 2);
 			int randomInt = (int)(Math.random() * number);
 			int n = negativeCheck == 0 ? randomInt * -1 : randomInt;
+			if (a == 0) {
+				System.out.println("root : " + n);
+			} else {
+				System.out.println("row : " + n);
+			}
 			insertValue(n);
 		}
 	}
@@ -87,7 +92,17 @@ public class ListSortSearch implements SortSearch{
 
 	@Override
 	public int[] take(int n) {
-		System.out.println(n);
+		Node parentNode = root;
+		for (int e=0; e<5; e++) {
+			if (parentNode.right != null) {
+				System.out.println(parentNode.getNodeName());
+				parentNode = parentNode.right;
+			} else if (parentNode.left != null) {
+				System.out.println();
+			} else {
+				System.out.println("  : " + parentNode.getNodeName());				
+			}
+		}
 		return null;
 	}
 
@@ -99,23 +114,14 @@ public class ListSortSearch implements SortSearch{
 	
 	
 	public static void main(String[] args) {
-//		long beforeTime = System.currentTimeMillis(); //ÄÚµå ½ÇÇà Àü¿¡ ½Ã°£ ¹Þ¾Æ¿À±â
-//		long afterTime = System.currentTimeMillis(); // ÄÚµå ½ÇÇà ÈÄ¿¡ ½Ã°£ ¹Þ¾Æ¿À±â
+//		long beforeTime = System.currentTimeMillis(); //ï¿½Úµï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ã°ï¿½ ï¿½Þ¾Æ¿ï¿½ï¿½ï¿½
+//		long afterTime = System.currentTimeMillis(); // ï¿½Úµï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ä¿ï¿½ ï¿½Ã°ï¿½ ï¿½Þ¾Æ¿ï¿½ï¿½ï¿½
 //		long secDiffTime = (afterTime - beforeTime)/1000;
-//		System.out.println("½Ã°£ :" + beforeTime + "  -   " + afterTime + " = " + secDiffTime);
+//		System.out.println(beforeTime + "  -   " + afterTime + " = " + secDiffTime);
 		
-		ListSortSearch lss = new ListSortSearch(1000);
+		ListSortSearch lss = new ListSortSearch(10);
 		lss.printBST();
-		
-        
-		int[] s = {1 ,3 ,5};
-		int[] list = lss.count(s);
-
-
-		
-		for (int a : list) {
-			System.out.println(a);
-		}
-		
+		lss.take(5);
+       		
 	}
 }
