@@ -8,8 +8,9 @@ public class Main {
 		 * 정수형 난수가 -2147483648 ~ 2147483647 (21억) 이여서 개발 시 확인 하기 힘들어 설정을
 		 * 추가하였습니다.
 		 * true : 개발 모드
+		 * ※과제에서 100만개의 자료를 생성할때 조금 시간이 걸릴 수 있습니다.
 		 */
-		ListSortSearch lss = new ListSortSearch(1000000, true);
+		ListSortSearch lss = new ListSortSearch(1000000, false);
 		
 		/**
 		 * 주석을 풀면 정렬된 값을 볼 수 있습니다 
@@ -21,16 +22,16 @@ public class Main {
 		 * 1. exists (n: Int) => Boolean : 해당 값이  존재 유무
 		 */
 		
-		System.out.println(lss.exists(12));
+//		System.out.println(lss.exists(12));
 		
 		/**
 		 * 2. range(-10, 100) : -10 ~ 100사이값 수집 (중복된 값도 모두 수집)
 		 */
 		
-//		ArrayList<Integer> al = lss.range(-10, 10);
-//		for (int a : al) {
-//			System.out.println(a);
-//		}
+		ArrayList<Integer> al = lss.range(-10000, 10000);
+		for (int a : al) {
+			System.out.println(a);
+		}
 		
 		/**
 		 * 3. count([3, 90, -10, 20]) : [0, 10, 20, 0] 각 수어진 수의 갯수 수집
