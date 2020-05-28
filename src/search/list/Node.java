@@ -34,4 +34,9 @@ public class Node {
     public int getCount() {
     	return this.count;
     }
+    
+    @Override
+    public String toString() {
+    	return Integer.toString(this.data);
+    }
 }
