@@ -3,7 +3,6 @@ package search.list;
 public class Node {
     int data;
     int count = 1;
-    String nodeName;
     Node left;
     Node right;
     
@@ -16,15 +15,6 @@ public class Node {
         this.data = data;
         this.left = null;
         this.right = null;
-        setNodeName(data);
-    }
-    
-    public void setNodeName (int data) {
-    	this.nodeName = data + " Node";
-    }
-    
-    public String getNodeName () {
-    	return this.nodeName;
     }
     
     public void plusCount() {

@@ -3,7 +3,7 @@ package search.list;
 import java.util.ArrayList;
 import java.util.regex.Pattern;
 
-public class ListSortSearch implements SortSearch{
+public class ListSortSearch implements SearchInter{
 	private Node root = null;
 	int descCount = 0;
 	int maxCount = 0;

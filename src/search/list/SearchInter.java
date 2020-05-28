@@ -2,7 +2,7 @@ package search.list;
 
 import java.util.ArrayList;
 
-public interface SortSearch {
+public interface SearchInter {
 	/**
 	 * 입력받은 해당 값이  존재 유무
 	 * 
