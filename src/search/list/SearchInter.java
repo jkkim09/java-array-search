@@ -18,7 +18,7 @@ public interface SearchInter {
 	 * @param max	찾는값 최대값
 	 * @return		찾은 값 list
 	 */
-	public int[] range(int min, int max);
+	public ArrayList<Integer> range(int min, int max);
 	
 	/**
 	 * 주어진 수의 갯수 수집
