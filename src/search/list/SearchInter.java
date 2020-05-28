@@ -1,6 +1,8 @@
 package search.list;
 
-public interface SortSearch {
+import java.util.ArrayList;
+
+public interface SearchInter {
 	/**
 	 * 입력받은 해당 값이  존재 유무
 	 * 
@@ -40,5 +42,5 @@ public interface SortSearch {
 	 * @param asterisk	찾는 조건
 	 * @return			찾은값 list
 	 */
-	public int[] filter(String asterisk);
+	public ArrayList<Integer> filter(String asterisk);
 }
