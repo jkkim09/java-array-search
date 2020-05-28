@@ -120,7 +120,16 @@ public class ListSortSearch implements SearchInter{
 
 	@Override
 	public int[] range(int min, int max) {
-		// TODO Auto-generated method stub
+		System.out.println("min : " + min + " , max : " + max);
+		int length = max - min - 1;
+		int start = min + 1;
+		for (int s=0; s<length; s++) {
+			Node node = searchNodeData(start);
+			if(node != null) {
+				System.out.println(node.getCount() + " , " + node.data);
+			}
+			start++;
+		}
 		return null;
 	}
 
